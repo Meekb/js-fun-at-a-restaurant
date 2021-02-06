@@ -1,24 +1,27 @@
-function takeOrder(order, deliveryOrders, takeOutOrders) {
-  if (deliveryOrders !== undefined && deliveryOrders.length < 3) {
-    deliveryOrders.push(order);
-    return deliveryOrders;
-  } else if (deliveryOrders !== undefined && deliveryOrders.length >= 3) {
-    return deliveryOrders;
-  } else if (deliveryOrders === undefined && takeOutOrders.length < 3) {
-    takeOutOrders.push(order);
-    return takeOutOrders;
+function takeOrder(order, deliveryOrders) {
+  if (deliveryOrders.length > 2) {
+  return deliveryOrders;
   } else {
-    return takeOutOrders;
+  return deliveryOrders.push(order);
   }
 }
 
-function refundOrder() {
-  
+function refundOrder(orderNum, deliveryOrders) {
+  orderNum = deliveryOrders[i];
+  deliveryOrders.splice(orderNum, 1);
+  return deliveryOrders;
 }
+
+function listItems(deliveryOrders) {
+  
+  return deliveryOrders.indexOf();
+}
+
+
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
