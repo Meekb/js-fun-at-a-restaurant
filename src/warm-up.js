@@ -97,15 +97,12 @@ console.log(talkAboutFood(isFavorite));
 // vegetables, represented by their names as Strings.
 
 var vegetables = ['Spinach', 'Parsnip', 'Zucchini', 'Onion', 'Cucumber'];
-
 console.log(vegetables);
-
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
 console.log(vegetables[2]);
-
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
