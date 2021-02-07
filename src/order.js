@@ -6,15 +6,24 @@ function takeOrder(order, deliveryOrders) {
   }
 }
 
-function refundOrder(orderNum, deliveryOrders) {
-  orderNum = deliveryOrders[i];
-  deliveryOrders.splice(orderNum, 1);
-  return deliveryOrders;
+function refundOrder(num, deliveryOrders) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].orderNumber === num) {
+      return deliveryOrders.splice([i], 1);
+    }
+  }
 }
 
+
 function listItems(deliveryOrders) {
-  
-  return deliveryOrders.indexOf();
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    return deliveryOrders[i].item + ", " + deliveryOrders[i+1].item + ", " + deliveryOrders[i+2].item;
+  }
+}
+
+function searchOrder(deliveryOrders, searchWord) {
+  var search = deliveryOrders.some(searchWord);
+  return search
 }
 
 
@@ -23,5 +32,5 @@ module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
