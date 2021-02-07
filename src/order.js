@@ -21,10 +21,14 @@ function listItems(deliveryOrders) {
   }
 }
 
+
 function searchOrder(deliveryOrders, searchWord) {
-  var search = deliveryOrders.some(searchWord);
-  return search
-}
+  for( var i = 0; i < deliveryOrders.length; i++) {
+    if(deliveryOrders[i].item === searchWord) {
+       return true;
+    } else continue ;
+      } return false;
+    }
 
 
 
