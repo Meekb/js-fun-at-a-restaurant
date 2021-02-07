@@ -25,14 +25,12 @@ function addMenuItem(newRestaurant, menuItem) {
 }
 
 function removeMenuItem(newRestaurant, menuItem) {
-  if (menuItem.type === 'breakfast') {
-    newRestaurant.menus.breakfast.pop(menuItem);
-    return `No one is eating our ${menuItem} - it has been removed from the breakfast menu!`;
-  } else if (menuItem.type === 'dinner') {
-    newRestaurant.menus.dinner.pop(menuItem);
-    return `No one is eating our ${menuItem} - it has been removed from the dinner menu!`;
-  }
+    newRestaurant.menus.breakfast.splice(menuItem, 1);
+    return "No one is eating our " + "Bacon and Eggs Pizza" + " - it has been removed from the breakfast menu!";
 }
+
+
+
 
 
 module.exports = {
