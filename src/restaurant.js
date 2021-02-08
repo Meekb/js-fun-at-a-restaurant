@@ -25,12 +25,9 @@ function addMenuItem(newRestaurant, menuItem) {
 }
 
 function removeMenuItem(newRestaurant, menuItem) {
-    newRestaurant.menus.breakfast.splice(menuItem, 1);
-    return "No one is eating our " + "Bacon and Eggs Pizza" + " - it has been removed from the breakfast menu!";
-}
-
-
-
+      newRestaurant.menus.breakfast.splice(menuItem, 1);
+      return "No one is eating our " + "Bacon and Eggs Pizza" + " - it has been removed from the breakfast menu!";
+  }
 
 
 module.exports = {
